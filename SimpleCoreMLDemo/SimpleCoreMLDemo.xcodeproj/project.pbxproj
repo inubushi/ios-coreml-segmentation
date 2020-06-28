@@ -13,8 +13,9 @@
 		7E35AFDA2471EEE600F49589 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E35AFD82471EEE600F49589 /* Main.storyboard */; };
 		7E35AFDC2471EEE700F49589 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E35AFDB2471EEE700F49589 /* Assets.xcassets */; };
 		7E35AFDF2471EEE700F49589 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E35AFDD2471EEE700F49589 /* LaunchScreen.storyboard */; };
-		7E35AFE72471F94A00F49589 /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7E35AFE62471F94A00F49589 /* MobileNetV2.mlmodel */; };
-		7EB272D72472971B00E690DB /* leopard@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7EB272D32472971B00E690DB /* leopard@2x.jpg */; };
+		7E3E3716249E2957002654CC /* DeepLabV3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7E3E3715249E2957002654CC /* DeepLabV3.mlmodel */; };
+		7E7D3CCA249FA2E80089076D /* DeepLabUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7D3CC9249FA2E80089076D /* DeepLabUtils.swift */; };
+		7EA944C324A63319002B1471 /* LegendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA944C224A63319002B1471 /* LegendViewController.swift */; };
 		7EB272D82472971B00E690DB /* lion@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7EB272D42472971B00E690DB /* lion@2x.jpg */; };
 		7EB272D92472971B00E690DB /* siamese_cat@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7EB272D52472971B00E690DB /* siamese_cat@2x.jpg */; };
 		7EB272DA2472971B00E690DB /* tabby_cat@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7EB272D62472971B00E690DB /* tabby_cat@2x.jpg */; };
@@ -22,6 +23,9 @@
 		7EB272DF2472A9A900E690DB /* iTunesArtwork@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EB272DC2472A9A900E690DB /* iTunesArtwork@3x.png */; };
 		7EB272E02472A9A900E690DB /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EB272DD2472A9A900E690DB /* iTunesArtwork@2x.png */; };
 		7EBB1BD824721234009D20CE /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBB1BD724721234009D20CE /* GalleryViewController.swift */; };
+		7EE6A05B24A82A4500907A3B /* tricycle@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7EE6A05624A82A4500907A3B /* tricycle@2x.jpg */; };
+		7EE6A05E24A82A4500907A3B /* child_monk@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7EE6A05924A82A4500907A3B /* child_monk@2x.jpg */; };
+		7EE6A05F24A82A4500907A3B /* kids@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7EE6A05A24A82A4500907A3B /* kids@2x.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,8 +37,9 @@
 		7E35AFDB2471EEE700F49589 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E35AFDE2471EEE700F49589 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E35AFE02471EEE700F49589 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7E35AFE62471F94A00F49589 /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
-		7EB272D32472971B00E690DB /* leopard@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "leopard@2x.jpg"; sourceTree = "<group>"; };
+		7E3E3715249E2957002654CC /* DeepLabV3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = DeepLabV3.mlmodel; sourceTree = "<group>"; };
+		7E7D3CC9249FA2E80089076D /* DeepLabUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLabUtils.swift; sourceTree = "<group>"; };
+		7EA944C224A63319002B1471 /* LegendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegendViewController.swift; sourceTree = "<group>"; };
 		7EB272D42472971B00E690DB /* lion@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "lion@2x.jpg"; sourceTree = "<group>"; };
 		7EB272D52472971B00E690DB /* siamese_cat@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "siamese_cat@2x.jpg"; sourceTree = "<group>"; };
 		7EB272D62472971B00E690DB /* tabby_cat@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tabby_cat@2x.jpg"; sourceTree = "<group>"; };
@@ -42,6 +47,9 @@
 		7EB272DC2472A9A900E690DB /* iTunesArtwork@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@3x.png"; sourceTree = "<group>"; };
 		7EB272DD2472A9A900E690DB /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		7EBB1BD724721234009D20CE /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		7EE6A05624A82A4500907A3B /* tricycle@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tricycle@2x.jpg"; sourceTree = "<group>"; };
+		7EE6A05924A82A4500907A3B /* child_monk@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "child_monk@2x.jpg"; sourceTree = "<group>"; };
+		7EE6A05A24A82A4500907A3B /* kids@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "kids@2x.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,15 +86,17 @@
 		7E35AFD12471EEE600F49589 /* SimpleCoreMLDemo */ = {
 			isa = PBXGroup;
 			children = (
+				7E3E3715249E2957002654CC /* DeepLabV3.mlmodel */,
 				7E35AFD22471EEE600F49589 /* AppDelegate.swift */,
 				7E35AFD42471EEE600F49589 /* SceneDelegate.swift */,
 				7E35AFD62471EEE600F49589 /* ViewController.swift */,
 				7EBB1BD724721234009D20CE /* GalleryViewController.swift */,
+				7E7D3CC9249FA2E80089076D /* DeepLabUtils.swift */,
 				7E35AFD82471EEE600F49589 /* Main.storyboard */,
 				7E35AFDD2471EEE700F49589 /* LaunchScreen.storyboard */,
 				7E35AFE02471EEE700F49589 /* Info.plist */,
-				7E35AFE62471F94A00F49589 /* MobileNetV2.mlmodel */,
 				7E35AFDB2471EEE700F49589 /* Assets.xcassets */,
+				7EA944C224A63319002B1471 /* LegendViewController.swift */,
 			);
 			path = SimpleCoreMLDemo;
 			sourceTree = "<group>";
@@ -94,10 +104,12 @@
 		7E35AFE82471FA5D00F49589 /* Photos */ = {
 			isa = PBXGroup;
 			children = (
-				7EB272D32472971B00E690DB /* leopard@2x.jpg */,
+				7EE6A05924A82A4500907A3B /* child_monk@2x.jpg */,
+				7EE6A05A24A82A4500907A3B /* kids@2x.jpg */,
 				7EB272D42472971B00E690DB /* lion@2x.jpg */,
 				7EB272D52472971B00E690DB /* siamese_cat@2x.jpg */,
 				7EB272D62472971B00E690DB /* tabby_cat@2x.jpg */,
+				7EE6A05624A82A4500907A3B /* tricycle@2x.jpg */,
 			);
 			path = Photos;
 			sourceTree = "<group>";
@@ -164,12 +176,14 @@
 				7EB272E02472A9A900E690DB /* iTunesArtwork@2x.png in Resources */,
 				7EB272DA2472971B00E690DB /* tabby_cat@2x.jpg in Resources */,
 				7EB272DE2472A9A900E690DB /* iTunesArtwork@1x.png in Resources */,
+				7EE6A05E24A82A4500907A3B /* child_monk@2x.jpg in Resources */,
 				7E35AFDC2471EEE700F49589 /* Assets.xcassets in Resources */,
 				7EB272DF2472A9A900E690DB /* iTunesArtwork@3x.png in Resources */,
 				7EB272D82472971B00E690DB /* lion@2x.jpg in Resources */,
-				7EB272D72472971B00E690DB /* leopard@2x.jpg in Resources */,
 				7E35AFDA2471EEE600F49589 /* Main.storyboard in Resources */,
+				7EE6A05B24A82A4500907A3B /* tricycle@2x.jpg in Resources */,
 				7EB272D92472971B00E690DB /* siamese_cat@2x.jpg in Resources */,
+				7EE6A05F24A82A4500907A3B /* kids@2x.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,7 +197,9 @@
 				7E35AFD72471EEE600F49589 /* ViewController.swift in Sources */,
 				7E35AFD32471EEE600F49589 /* AppDelegate.swift in Sources */,
 				7EBB1BD824721234009D20CE /* GalleryViewController.swift in Sources */,
-				7E35AFE72471F94A00F49589 /* MobileNetV2.mlmodel in Sources */,
+				7E7D3CCA249FA2E80089076D /* DeepLabUtils.swift in Sources */,
+				7E3E3716249E2957002654CC /* DeepLabV3.mlmodel in Sources */,
+				7EA944C324A63319002B1471 /* LegendViewController.swift in Sources */,
 				7E35AFD52471EEE600F49589 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

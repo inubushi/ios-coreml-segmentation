@@ -18,10 +18,12 @@ class GalleryViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     override func viewDidLoad() {
         // load image filenames
-        sampleList.append("leopard.jpg")
+        sampleList.append("child_monk.jpg")
+        sampleList.append("kids.jpg")
         sampleList.append("lion.jpg")
         sampleList.append("siamese_cat.jpg")
         sampleList.append("tabby_cat.jpg")
+        sampleList.append("tricycle.jpg")
         
         // done
     }

@@ -14,23 +14,38 @@ import CoreML
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var imgViewPhoto: UIImageView!
+    @IBOutlet weak var imgViewSegments: UIImageView!
+    
+    @IBOutlet weak var viewSliderContainer: UIView!
+    @IBOutlet weak var sliderSegmentAlpha: UISlider!
+    
     @IBOutlet weak var labelInfo: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     // using the MobileNet V2 model, because it is fast
-    let model = MobileNetV2()
+    let model = DeepLabV3()
     
     var selectedPhoto:UIImage!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewSliderContainer.isHidden = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
         // if a sample has been selected, classify it
         if (selectedPhoto != nil) {
             // set image
             imgViewPhoto.image = selectedPhoto
+            
+            // clear the result photo anyway
+            imgViewSegments.image = nil
+            
+            // reset slider
+            viewSliderContainer.isHidden = true
+            sliderSegmentAlpha.value = 0.5
+            
             // start classification in background
             labelInfo.text = "Analyzing Image..."
             activityIndicator.startAnimating()
@@ -39,6 +54,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 self.classifyImage(img: self.selectedPhoto)
             }
         }
+    }
+    
+    // slider
+    @IBAction func alphaChanged(_ sender: UISlider) {
+        imgViewSegments.alpha = CGFloat(sender.value)
     }
     
     // use camera to take a photo for classification
@@ -72,6 +92,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             return
         }
         imgViewPhoto.image = image
+        imgViewSegments.image = nil
         
         // start classification in background
         labelInfo.text = "Analyzing Image..."
@@ -91,8 +112,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func classifyImage(img:UIImage) {
         // conversion to the correct input size,
         // and get the image data to a pixel buffer
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: 224, height: 224), true, 2.0)
-        img.draw(in: CGRect(x: 0, y: 0, width: 224, height: 224))
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: 513, height: 513), true, 2.0)
+        img.draw(in: CGRect(x: 0, y: 0, width: 513, height: 513))
         let newImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
@@ -127,13 +148,22 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let nanoTime = end.uptimeNanoseconds - start.uptimeNanoseconds // processing time in nano seconds (UInt64)
         let timeInterval = Double(nanoTime) / 1_000_000 // convert to milliseconds, for ease of reading
         
-        var resultString: String = "AI thinks this is a \(prediction.classLabel)."
+        var resultString: String = ""
         resultString += String(format:"\n(%f milliseconds)", timeInterval)
+        
+        let multiArray: MLMultiArray = prediction.semanticPredictions
+        print(multiArray.count)
         
         // update results on main thread
         DispatchQueue.main.async {
             self.activityIndicator.stopAnimating()
+            // update results
+            self.imgViewSegments.image = getDeepLabV3ResultImage(result: multiArray)
+            self.imgViewSegments.alpha = 0.5
             self.labelInfo.text = resultString
+            
+            // show slider
+            self.viewSliderContainer.isHidden = false
         }
     }
     
@@ -144,3 +174,5 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     // that's all, folks!
 }
+
+
